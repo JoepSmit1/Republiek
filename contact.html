@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Republiek Bloemendaal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="Republiek-Logo.png" alt="Republiek Bloemendaal" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="https://www.republiekbloemendaal.nl/#activate-link-widget" target="_blank" rel="noopener">Werken bij Republiek</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="contact.html#reserveer" class="nav-btn">Reserveer</a>
+  <button class="nav-hamburger" id="nav-hamburger" type="button" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mob-overlay" style="display:none;position:fixed;inset:0;background:var(--cream);z-index:500;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;">
+  <button id="mob-close" type="button" style="position:absolute;top:1.5rem;right:1.5rem;font-size:22px;background:none;border:none;cursor:pointer;color:var(--ink);padding:8px;line-height:1;">&#x2715;</button>
+  <a href="index.html" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">Home</a>
+  <a href="menu.html" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">Menu</a>
+  <a href="events.html" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">Events</a>
+  <a href="https://www.republiekbloemendaal.nl/#activate-link-widget" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;" target="_blank" rel="noopener">Werken bij Republiek</a>
+  <a href="contact.html" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:3px;">Contact</a>
+</div>
+
+<!-- NAV -->
+
+
+<!-- HEADER -->
+<div class="page-header">
+  <div class="page-label">Bloemendaal aan Zee</div>
+  <div class="page-title">Contact</div>
+  <div class="page-line"></div>
+</div>
+
+<!-- MAIN GRID -->
+<div class="contact-grid">
+
+  <!-- LEFT: INFO -->
+  <div>
+    <div class="info-block">
+      <div class="info-label">Adres</div>
+      <div class="info-value">
+        Zeeweg 94 BLM 1<br>
+        2051EC Overveen
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-label">Telefoon</div>
+      <div class="info-value">
+        <a href="tel:0235730730">023 – 573 07 30</a>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-label">E-mail</div>
+      <div class="info-value">
+        <a href="mailto:reserveringen@republiekbloemendaal.nl">reserveringen@republiekbloemendaal.nl</a>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-label">Events</div>
+      <div class="info-value">
+        <a href="mailto:events@republiekbloemendaal.nl">events@republiekbloemendaal.nl</a>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-label">Volg ons</div>
+      <div class="social-row">
+        <a href="https://www.instagram.com/republiekbloemendaal" target="_blank" class="social-link">Instagram</a>
+        <a href="https://www.facebook.com/republiekbloemendaal" target="_blank" class="social-link">Facebook</a>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="info-label" style="margin-bottom:1rem;">Openingstijden</div>
+    <div class="hours-row"><span>Maandag</span><span>09:00 – 22:30</span></div>
+    <div class="hours-row"><span>Dinsdag</span><span>09:00 – 22:30</span></div>
+    <div class="hours-row"><span>Woensdag</span><span>09:00 – 22:30</span></div>
+    <div class="hours-row"><span>Donderdag</span><span>09:00 – 22:30</span></div>
+    <div class="hours-row"><span>Vrijdag</span><span>09:00 – 22:30</span></div>
+    <div class="hours-row"><span>Zaterdag</span><span>09:00 – 22:30</span></div>
+    <div class="hours-row"><span>Zondag</span><span>09:00 – 22:30</span></div>
+  </div>
+
+  <!-- RIGHT: FORM -->
+  <div id="reserveer">
+    <div class="form-title">Stuur ons een bericht</div>
+    <div class="form-subtitle">We reageren zo snel mogelijk</div>
+
+    <form onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Voornaam</label>
+          <input type="text" placeholder="Jan" required>
+        </div>
+        <div class="form-group">
+          <label>Achternaam</label>
+          <input type="text" placeholder="de Vries" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>E-mailadres</label>
+        <input type="email" placeholder="jan@voorbeeld.nl" required>
+      </div>
+      <div class="form-group">
+        <label>Telefoon</label>
+        <input type="tel" placeholder="06 – 12 34 56 78">
+      </div>
+      <div class="form-group">
+        <label>Onderwerp</label>
+        <select>
+          <option value="">Selecteer een onderwerp</option>
+          <option>Reservering</option>
+          <option>Events & Feesten</option>
+          <option>Offerte aanvragen</option>
+          <option>Algemene vraag</option>
+          <option>Werken bij Republiek</option>
+          <option>Overig</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Bericht</label>
+        <textarea placeholder="Uw bericht..." required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Verstuur bericht</button>
+    </form>
+
+    <div id="form-success" style="display:none; margin-top:1.5rem; padding: 1rem 1.2rem; background: var(--sand); border-left: 2px solid var(--ink); font-size:15px; font-style:italic; color:var(--ink-soft);">
+      Bedankt voor uw bericht — we nemen zo snel mogelijk contact met u op.
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- EVENTS CTA -->
+<div class="events-cta">
+  <h3>Een evenement plannen?</h3>
+  <p>Republiek Bloemendaal is de ideale locatie voor bedrijfsfeesten, diners, meetings en meer.</p>
+  <a href="mailto:events@republiekbloemendaal.nl" class="btn-ghost">Mail ons</a>
+  <a href="https://app.miceoperations.com/widget/36fc605f6fde" target="_blank" class="btn-light">Offerte aanvragen</a>
+</div>
+
+<!-- MAP -->
+<div class="map-strip">
+  <div class="map-label">Hoe u ons vindt</div>
+  <div class="map-embed">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.1!2d4.5408!3d52.3878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e5e5e5e5e5e5%3A0x0!2sZeeweg%2094%2C%202051EC%20Overveen!5e0!3m2!1snl!2snl!4v1234567890"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+</div>
+
+<script src="contact.js" defer></script>
+<script>
+(function() {
+  function init() {
+    var btn     = document.getElementById("nav-hamburger");
+    var overlay = document.getElementById("mob-overlay");
+    var close   = document.getElementById("mob-close");
+    if (!btn || !overlay || !close) return;
+    btn.addEventListener("click", function() {
+      overlay.style.display = "flex";
+      document.body.style.overflow = "hidden";
+      btn.classList.add("open");
+    });
+    function closeMenu() {
+      overlay.style.display = "none";
+      document.body.style.overflow = "";
+      btn.classList.remove("open");
+    }
+    close.addEventListener("click", closeMenu);
+    overlay.querySelectorAll("a").forEach(function(a) {
+      a.addEventListener("click", closeMenu);
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else { init(); }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beleef het aan zee | Republiek Bloemendaal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="Republiek-Logo.png" alt="Republiek Bloemendaal" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="https://www.republiekbloemendaal.nl/#activate-link-widget" target="_blank" rel="noopener">Werken bij Republiek</a></li>
+      <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html#reserveer" class="nav-btn">Reserveer</a>
+  <button class="nav-hamburger" id="nav-hamburger" type="button" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mob-overlay" style="display:none;position:fixed;inset:0;background:var(--cream);z-index:500;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;">
+  <button id="mob-close" type="button" style="position:absolute;top:1.5rem;right:1.5rem;font-size:22px;background:none;border:none;cursor:pointer;color:var(--ink);padding:8px;line-height:1;">&#x2715;</button>
+  <a href="index.html" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:3px;">Home</a>
+  <a href="menu.html" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">Menu</a>
+  <a href="events.html" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">Events</a>
+  <a href="https://www.republiekbloemendaal.nl/#activate-link-widget" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;" target="_blank" rel="noopener">Werken bij Republiek</a>
+  <a href="contact.html" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">Contact</a>
+</div>
+
+<!-- NAV -->
+
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <video class="hero-bg" autoplay muted loop playsinline>
+    <source src="hero_video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img src="Republiek-Logo.png" alt="Republiek Bloemendaal" class="hero-logo-img">
+    <div class="hero-tagline">Beleef het aan zee</div>
+    <div class="hero-location">Bloemendaal aan Zee — Zeeweg 94</div>
+    <p class="hero-intro">
+      Onze oase aan de Noordzee, waar kleurrijke zonsondergangen de achtergrond zijn en waar we het leven vieren met puur eten, samenzijn én een tijdloos interieur.
+    </p>
+    <div class="hero-btns">
+      <a href="#footer" class="btn-outline">Reserveer hier</a>
+      <a href="menu.html" class="btn-outline">Bekijk het menu</a>
+      <a href="https://app.miceoperations.com/widget/36fc605f6fde" target="_blank" class="btn-outline">Brochure</a>
+    </div>
+  </div>
+</section>
+
+<!-- KEUKEN -->
+<section class="keuken" id="keuken">
+  <div class="keuken-inner">
+    <div class="reveal">
+      <div class="section-label">Onze keuken</div>
+      <h2>Pure smaken,<br>eigentijdse gerechten</h2>
+      <p>In ons restaurant draait alles om pure smaken en eigentijdse gerechten. Geniet van gerechten die meebewegen met de seizoenen, geserveerd met uitzicht op zee — hier proef je de kust op haar best. Onze keuken werkt uitsluitend met kwaliteitsproducten van Lindenhoff en staat onder leiding van chef Gerrit Marcus. Samen met sous-chef Jeroen Bavelaar, met ervaring in een Michelinrestaurant, staat hij garant voor verfijning in elk detail.</p>
+      <p>Naast onze gerechten hebben wij ook een uitgebreide, originele wijnkaart, samengesteld met wijnhuizen waarmee wij al jaren samenwerken.</p>
+      <p>Begin de dag met een heerlijk ontbijt, geniet van een uitgebreide lunch en ontdek vanaf 16.00 dagelijks onze borrelkaart en pizza's uit onze eigen houtoven.</p>
+      <div class="chef-quote">
+        "Deze keuken is vrij en niet geremd door wat een strandtent zou moeten zijn. Koken 'sin miedo'."
+        <br><br>— Chef Gerrit Marcus
+      </div>
+      <a href="menu.html" class="btn-outline">Bekijk het menu</a>
+    </div>
+    <div class="keuken-photos reveal">
+      <div class="photo"><img src="keuken1.jpg" alt="Gerechten Republiek" loading="lazy"></div>
+      <div class="photo"><img src="keuken2.jpg" alt="Houtoven Republiek" loading="lazy"></div>
+      <div class="photo"><img src="keuken3.jpg" alt="Pizza Republiek" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider">
+  <div class="divider-line"></div>
+  <div class="divider-text">Bloemendaal aan Zee</div>
+  <div class="divider-line"></div>
+</div>
+
+<!-- EVENTS -->
+<section class="events" id="events">
+  <div class="events-inner">
+    <div class="events-photo" id="rc" style="position:relative;overflow:hidden;cursor:pointer;">
+      <div id="rc0" style="position:absolute;inset:0;background:url('event1.jpeg') center/cover no-repeat;opacity:1;transition:opacity 1.2s;"></div>
+      <div id="rc1" style="position:absolute;inset:0;background:url('event2.jpeg') center/cover no-repeat;opacity:0;transition:opacity 1.2s;"></div>
+      <div id="rc2" style="position:absolute;inset:0;background:url('event3.jpg') center/cover no-repeat;opacity:0;transition:opacity 1.2s;"></div>
+      <div id="rc3" style="position:absolute;inset:0;background:url('event4.jpg') center/cover no-repeat;opacity:0;transition:opacity 1.2s;"></div>
+      <div id="rc4" style="position:absolute;inset:0;background:url('event5.jpeg') center/cover no-repeat;opacity:0;transition:opacity 1.2s;"></div>
+      <div id="rcdots" style="position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:20;">
+        <span id="rd0" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.9);display:block;cursor:pointer;"></span>
+        <span id="rd1" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.35);display:block;cursor:pointer;"></span>
+        <span id="rd2" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.35);display:block;cursor:pointer;"></span>
+        <span id="rd3" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.35);display:block;cursor:pointer;"></span>
+        <span id="rd4" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.35);display:block;cursor:pointer;"></span>
+      </div>
+    </div>
+    
+    <div class="reveal">
+      <div class="section-label">Events</div>
+      <h2>De ideale locatie voor elk gezelschap</h2>
+      <p>Met alle ruimte in diverse privéruimtes is Republiek Bloemendaal de ideale locatie voor kleine en grote gezelschappen.</p>
+      <p>Vertel ons jouw wensen, dan verzorgen wij graag een op maat gemaakte ervaring waarbij wij beschikken over de juiste contacten om de gelegenheid uniek te maken.</p>
+      <div class="events-tags">
+        <span class="tag">Vieringen</span>
+        <span class="tag">Meetings</span>
+        <span class="tag">Lanceringen</span>
+        <span class="tag">Fotoshoots</span>
+        <span class="tag">Bedrijfsfeesten</span>
+        <span class="tag">Workshops</span>
+      </div>
+      <p class="events-note">Babyshowers, bruiloften of vrijgezellen in thema zijn bij ons niet mogelijk. Huwelijksfeesten en pre-diners zijn wel mogelijk.</p>
+      <div class="events-btns">
+        <a href="events.html" class="btn-ghost">Bekijk events</a>
+        <a href="mailto:events@republiekbloemendaal.nl" class="btn-ghost">Mail ons</a>
+        <a href="https://app.miceoperations.com/widget/36fc605f6fde" target="_blank" class="btn-light">Offerte aanvragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">
+        <img src="Republiek-Logo.png" alt="Republiek Bloemendaal" class="footer-logo-img">
+      </div>
+      <div class="footer-contact">
+        <p>Zeeweg 94 BLM 1<br>2051EC Overveen</p>
+        <br>
+        <p><a href="mailto:reserveringen@republiekbloemendaal.nl">reserveringen@republiekbloemendaal.nl</a></p>
+        <p><a href="tel:0235730730">023 – 573 07 30</a></p>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Openingstijden</h4>
+      <div class="hours-row"><span>Maandag</span><span>09:00 – 22:30</span></div>
+      <div class="hours-row"><span>Dinsdag</span><span>09:00 – 22:30</span></div>
+      <div class="hours-row"><span>Woensdag</span><span>09:00 – 22:30</span></div>
+      <div class="hours-row"><span>Donderdag</span><span>09:00 – 22:30</span></div>
+      <div class="hours-row"><span>Vrijdag</span><span>09:00 – 22:30</span></div>
+      <div class="hours-row"><span>Zaterdag</span><span>09:00 – 22:30</span></div>
+      <div class="hours-row"><span>Zondag</span><span>09:00 – 22:30</span></div>
+    </div>
+    <div class="footer-col">
+      <h4>Direct naar</h4>
+      <ul class="footer-links">
+        <li><a href="#">Werken bij Republiek</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#">Restaurant</a></li>
+        <li><a href="events.html">Events</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Republiek Bloemendaal</span>
+    <span>Zeeweg 94 BLM 1 — Overveen</span>
+  </div>
+</footer>
+
+<script src="index.js" defer></script>
+<script>
+(function() {
+  function init() {
+    var btn     = document.getElementById("nav-hamburger");
+    var overlay = document.getElementById("mob-overlay");
+    var close   = document.getElementById("mob-close");
+    if (!btn || !overlay || !close) return;
+    btn.addEventListener("click", function() {
+      overlay.style.display = "flex";
+      document.body.style.overflow = "hidden";
+      btn.classList.add("open");
+    });
+    function closeMenu() {
+      overlay.style.display = "none";
+      document.body.style.overflow = "";
+      btn.classList.remove("open");
+    }
+    close.addEventListener("click", closeMenu);
+    overlay.querySelectorAll("a").forEach(function(a) {
+      a.addEventListener("click", closeMenu);
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else { init(); }
+})();
+</script>
+</body>
+</html>

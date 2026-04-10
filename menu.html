@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Republiek Bloemendaal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="Republiek-Logo.png" alt="Republiek Bloemendaal" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="https://www.republiekbloemendaal.nl/#activate-link-widget" target="_blank" rel="noopener">Werken bij Republiek</a></li>
+      <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html#reserveer" class="nav-btn">Reserveer</a>
+  <button class="nav-hamburger" id="nav-hamburger" type="button" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mob-overlay" style="display:none;position:fixed;inset:0;background:var(--cream);z-index:500;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;">
+  <button id="mob-close" type="button" style="position:absolute;top:1.5rem;right:1.5rem;font-size:22px;background:none;border:none;cursor:pointer;color:var(--ink);padding:8px;line-height:1;">&#x2715;</button>
+  <a href="index.html" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">Home</a>
+  <a href="menu.html" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:3px;">Menu</a>
+  <a href="events.html" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">Events</a>
+  <a href="https://www.republiekbloemendaal.nl/#activate-link-widget" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;" target="_blank" rel="noopener">Werken bij Republiek</a>
+  <a href="contact.html" style="color:var(--ink);font-family:Jost,sans-serif;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">Contact</a>
+</div>
+
+<div class="page-header">
+  <div class="page-label">Seizoensgebonden</div>
+  <div class="page-title">Menu</div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="showTab('breakfast', this)">Breakfast</button>
+  <button class="tab-btn" onclick="showTab('lunch', this)">Lunch</button>
+  <button class="tab-btn" onclick="showTab('diner', this)">Diner</button>
+  <button class="tab-btn" onclick="showTab('snacks', this)">Snacks</button>
+  <button class="tab-btn" onclick="showTab('pizza', this)">Pizza &amp; Burger</button>
+  <button class="tab-btn" onclick="showTab('drinks', this)">Drinks</button>
+  <button class="tab-btn" onclick="showTab('wijnen', this)">Wijnen</button>
+</div>
+
+<div class="menu-panels">
+
+  <!-- ── BREAKFAST ── -->
+  <div class="panel active" id="panel-breakfast">
+    <div class="notice">Te allen tijde te bestellen tot 11:30. Onderstaande gerechten zijn altijd beschikbaar — de weekendgerechten zijn uitsluitend op zaterdag en zondag verkrijgbaar.</div>
+
+    <div class="section-head"><h2>Breakfast</h2><span class="time">9:00 – 11:30</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Griekse yoghurt, granola, vers fruit</span></div><span class="dish-price">8.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Gekookt ei, Goudse opleg kaas en toast</span></div><span class="dish-price">6.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Croissant zoet, jam &amp; boerenboter</span></div><span class="dish-price">5.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">French toast, mascarpone en aardbei</span></div><span class="dish-price">6.50</span></div>
+
+    <div class="sub-head">Alleen in het weekend <span class="weekend-tag">Za &amp; Zo</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Houtoven eieren, tomaat, chili &amp; zuurdesem</span></div><span class="dish-price">10.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Zalm, brioche gepocheerd ei en Hollandaise</span></div><span class="dish-price">10.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Bacon and eggs, English muffin, bieslook</span></div><span class="dish-price">10.50</span></div>
+
+    <div class="sub-head">Drinks bij het ontbijt</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Dagsap</span></div><span class="dish-price">6.50 – 7.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Verse jus</span></div><span class="dish-price">6.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Bloody Mary</span></div><span class="dish-price">11.75 – 12.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Mimosa</span></div><span class="dish-price">9.00</span></div>
+
+    <p class="menu-note">Vragen over de samenstelling? Vraag het aan een van onze medewerkers.</p>
+  </div>
+
+  <!-- ── LUNCH ── -->
+  <div class="panel" id="panel-lunch">
+    <div class="notice">Beschikbaar van 12:00 tot 15:00 (16:00 in het weekend). To Share gerechten zijn te allen tijde beschikbaar.</div>
+
+    <div class="section-head"><h2>To Share</h2><span class="time">12:00 – sluit</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Olijven, bella Cerignola, itrana</span></div><span class="dish-price">6.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Bawykov zalm, venkel en mierikswortel</span></div><span class="dish-price">16.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Paleta Iberica, Spaanse schouderham, toast</span></div><span class="dish-price">18.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Speciale nr. 3 oesters, mignonette, 3 stuks</span></div><span class="dish-price">14.50 – 15.75</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Zuurdesem bol, gerookte aioli</span></div><span class="dish-price">8.75</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Pimientos de Padron</span></div><span class="dish-price">10.50</span></div>
+
+    <div class="section-head"><h2>Lunch</h2><span class="time">12:00 – 15:00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Uiensoep, houtoven, Gruyere en zuurdesem</span></div><span class="dish-price">11.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Linzen en knolselderij soep, flatbread, chili olie</span></div><span class="dish-price">11.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Makreel, gerookt, spicy appel en peterselie</span></div><span class="dish-price">13.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Caesar, Parmezaan, ansjovis en boerderij kip</span></div><span class="dish-price">15.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Toast, radicchio, burrata en ingelegde peer</span></div><span class="dish-price">14.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Geitenkaas uit de houtoven, vijgen, venkel</span></div><span class="dish-price">14.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Smash burger, cheddar en coleslaw<span class="dish-desc">ook vega</span></span></div><span class="dish-price">19.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Confit de canard, geroosterde biet en linzen</span></div><span class="dish-price">19.50</span></div>
+
+    <div class="sub-head">Sides</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Spruiten, ancho olie en tallegio</span></div><span class="dish-price">8.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Pommes Anna</span></div><span class="dish-price">8.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Spitskool, Kimchi dressing</span></div><span class="dish-price">8.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Prei, room en witte wijn</span></div><span class="dish-price">8.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Friet, Friethoes</span></div><span class="dish-price">5.50</span></div>
+
+    <div class="sub-head">Dessert</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Brownie, chocolade ijs</span></div><span class="dish-price">8.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Crème brulee, vanille</span></div><span class="dish-price">9.50</span></div>
+
+    <p class="menu-note">Vragen over de samenstelling? Vraag het aan een van onze medewerkers.</p>
+  </div>
+
+  <!-- ── DINER ── -->
+  <div class="panel" id="panel-diner">
+    <div class="notice">Beschikbaar van 17:00 – 19:30 (18:00 – 20:00 in het weekend). Shared gerechten zijn in het weekend ook al beschikbaar vanaf 12:00.</div>
+
+    <div class="section-head"><h2>Voor</h2></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Stracciatella, tardiva, pickled pear, altamura</span></div><span class="dish-price">14.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Bisque, krab en kreeft, crabtoast</span></div><span class="dish-price">17.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Mosselen XO sauce, chili en creme fraiche</span></div><span class="dish-price">17.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Blackened tartaar, shitake en sumo miso</span></div><span class="dish-price">14.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Maitake gebakken, toast, oude kaas en peterselie</span></div><span class="dish-price">14.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Uiensoep, houtoven, Gruyere en zuurdesem</span></div><span class="dish-price">11.50</span></div>
+
+    <div class="section-head"><h2>Hoofd</h2></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Simmertaler steak, 6 wkn DA, merg</span></div><span class="dish-price">29.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Kabeljauw, grijze garnalen &amp; coco Paimpol</span></div><span class="dish-price">24.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Parelgort, knolselderij en cavolo nero</span></div><span class="dish-price">22.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Boeuf Bourguignon, klassiek, houtoven</span></div><span class="dish-price">24.50</span></div>
+
+    <div class="section-head"><h2>Shared</h2><span class="time">In het weekend ook vanaf 12:00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Cote de boeuf, 700 gr, 6 wkn DA, sides</span></div><span class="dish-price">95.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Tarbot, op hout gegrild, blitz en sides</span></div><span class="dish-price">85.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Poulet roti, citroen en tijm<span class="dish-desc">1 persoon / 2 personen</span></span></div><span class="dish-price">27.50 / 55.00</span></div>
+
+    <div class="section-head"><h2>Dessert</h2></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Gateau au chocolat, rozenbottel, crème fraîche</span></div><span class="dish-price">10.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Crème brulee, vanille</span></div><span class="dish-price">9.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Tarte tatin (2 pers), witte choco/koffie ijs</span></div><span class="dish-price">15.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Kazen, vraag de bediening</span></div><span class="dish-price">15.50</span></div>
+
+    <p class="menu-note">Vragen over de samenstelling? Vraag het aan een van onze medewerkers.</p>
+  </div>
+
+  <!-- ── SNACKS ── -->
+  <div class="panel" id="panel-snacks">
+    <div class="notice">Snacks zijn beschikbaar vanaf 12:00.</div>
+
+    <div class="section-head"><h2>Snacks</h2></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Paleta Iberica, Spaanse schouderham, toast</span></div><span class="dish-price">18.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Pimientos de Padron</span></div><span class="dish-price">10.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Speciale nr. 3 oesters, mignonette, 3 stuks</span></div><span class="dish-price">14.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Bawykov zalm, venkel en mierikswortel</span></div><span class="dish-price">16.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Zuurdesem, aioli, daslook</span></div><span class="dish-price">8.75</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Olijven, bella Cerignola, itrana</span></div><span class="dish-price">6.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Kalfsbitterballen, Dijonmosterd, 6 stuks</span></div><span class="dish-price">8.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Chicken crunchy, chilisaus, 6 stuks</span></div><span class="dish-price">8.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Kaaskroketjes, Harissa mayonaise, 6 stuks</span></div><span class="dish-price">8.50</span></div>
+
+    <p class="menu-note">Vragen over de samenstelling? Vraag het aan een van onze medewerkers.</p>
+  </div>
+
+  <!-- ── PIZZA & BURGER ── -->
+  <div class="panel" id="panel-pizza">
+    <div class="notice">Pizza's kunnen apart komen van overige gerechten. Dagelijks beschikbaar vanaf 16:00.</div>
+
+    <div class="section-head"><h2>Burger</h2></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Smash burger, double patty, cheddar en coleslaw<span class="dish-desc">ook vega</span></span></div><span class="dish-price">19.50</span></div>
+
+    <div class="section-head"><h2>Pizza</h2></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Margherita (v)<span class="dish-desc">Buffelmozzarella, basilicum, tomaat — Parmezaan +2.00</span></span></div><span class="dish-price">14.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Calabrese / Gorgonzola<span class="dish-desc">Buffelmozzarella, pikante salami, tomaat, gorgonzola</span></span></div><span class="dish-price">15.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Prosciutto<span class="dish-desc">Buffelmozzarella, San Daniele, tomaat</span></span></div><span class="dish-price">16.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Alici<span class="dish-desc">Buffelmozzarella, ansjovis, tomaat</span></span></div><span class="dish-price">15.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Pizza tartufo<span class="dish-desc">Provolone &amp; truffelmascarpone</span></span></div><span class="dish-price">16.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Pizza Special</span></div><span class="dish-price">15.50</span></div>
+
+    <p class="menu-note">Vragen over de samenstelling? Vraag het aan een van onze medewerkers.</p>
+  </div>
+
+  <!-- ── DRINKS ── -->
+  <div class="panel" id="panel-drinks">
+    <div class="section-head"><h2>Koffie &amp; Thee</h2></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Koffie</span></div><span class="dish-price">4.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Cappuccino</span></div><span class="dish-price">4.20</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Koffie verkeerd</span></div><span class="dish-price">4.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Espresso</span></div><span class="dish-price">3.80</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Dubbele espresso</span></div><span class="dish-price">5.60</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Latte macchiato</span></div><span class="dish-price">4.60</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Flat white</span></div><span class="dish-price">6.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Chai latte</span></div><span class="dish-price">5.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Iced koffie / Iced latte</span></div><span class="dish-price">5.00 / 6.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Thee / Verse munt / Verse gember</span></div><span class="dish-price">4.00 / 4.50 / 4.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Warme Chocomel</span></div><span class="dish-price">5.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Babyccino</span></div><span class="dish-price">2.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Extras<span class="dish-desc">Slagroom +1.50 · Havermelk +0.50 · Decafé +0.25 · Extra shot +1.80</span></span></div><span class="dish-price"></span></div>
+
+    <div class="sub-head">Speciale koffies &amp; gebak</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Koffie met likeur<span class="dish-desc">naar keuze met slagroom</span></span></div><span class="dish-price">10.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Appeltaart / Carrot cake<span class="dish-desc">Slagroom +1.50</span></span></div><span class="dish-price">6.50</span></div>
+
+    <div class="section-head"><h2>Sapjes &amp; Frisdranken</h2></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Verse jus klein / groot</span></div><span class="dish-price">5.00 / 6.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Juice Brothers organic cold pressed</span></div><span class="dish-price">7.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Fever Tree (Ginger Beer, Tonic, Ginger Ale, etc.)</span></div><span class="dish-price">4.70</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Coca-Cola / Coca-Cola Zero</span></div><span class="dish-price">3.80</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Fanta / Sprite</span></div><span class="dish-price">3.80</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Kombucha</span></div><span class="dish-price">5.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Luxe limonade / Kids limonade</span></div><span class="dish-price">4.50 / 2.75</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Marie-Stella-Maris klein / groot</span></div><span class="dish-price">3.75 / 7.00</span></div>
+
+    <div class="section-head"><h2>Bieren</h2></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Heineken fluitje / vaasje van de tap</span></div><span class="dish-price">3.75 / 4.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Heineken fles</span></div><span class="dish-price">5.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Sol / Desperados</span></div><span class="dish-price">6.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">IJwit van Brouwerij 't IJ</span></div><span class="dish-price">6.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Affligem blond van de tap</span></div><span class="dish-price">5.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Brand Weizen / Brand IPA</span></div><span class="dish-price">5.50</span></div>
+    <div class="sub-head">Bieren 0.0</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Lowlander Mango IPA 0.0</span></div><span class="dish-price">6.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Vrijwit Brouwerij 't IJ 0.0</span></div><span class="dish-price">6.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Heineken 0.0 / Brand Weizen 0.0</span></div><span class="dish-price">5.00</span></div>
+
+    <div class="section-head"><h2>Cocktails</h2></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Aperol Spritz<span class="dish-desc">Aperol, prosecco, bruiswater, sinaasappel</span></span></div><span class="dish-price">11.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Moscow Mule<span class="dish-desc">Ketel One vodka, Fever Tree ginger beer, limoen</span></span></div><span class="dish-price">12.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Pornstar Martini<span class="dish-desc">Vodka, passievrucht, vanille siroop</span></span></div><span class="dish-price">13.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Espresso Martini<span class="dish-desc">Vodka, Kahlua, espresso</span></span></div><span class="dish-price">13.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Bloody Mary<span class="dish-desc">Ketel One vodka, Big Tom, citroen</span></span></div><span class="dish-price">12.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Mimosa<span class="dish-desc">Jus d'orange, prosecco (eventueel 0.0)</span></span></div><span class="dish-price">9.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Sour of your choice<span class="dish-desc">Citroen, suiker, Angostura bitter, foam — met Amaretto, Rum of Whiskey</span></span></div><span class="dish-price">12.50</span></div>
+
+    <div class="sub-head">Republiek's Favorites</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Paloma<span class="dish-desc">Don Julio Tequila Blanco, grapefruit, limoen, agave, soda — Smoked met Mezcal +1.50</span></span></div><span class="dish-price">13.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Negroni<span class="dish-desc">Gin, Campari, Vermouth, sinaasappel</span></span></div><span class="dish-price">13.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Salty Margarita<span class="dish-desc">Tequila, Cointreau, limoen</span></span></div><span class="dish-price">12.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Flor &amp; Stormy<span class="dish-desc">Flor de Caña 12Y, Fever Tree ginger beer, limoen, munt</span></span></div><span class="dish-price">14.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Cuba Libre<span class="dish-desc">Flor de Caña 12Y, Coca-Cola, limoen</span></span></div><span class="dish-price">12.50</span></div>
+
+    <div class="sub-head">Gin Tonic's</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Tanqueray</span></div><span class="dish-price">12.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Hendricks</span></div><span class="dish-price">13.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Bobby's</span></div><span class="dish-price">14.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Gin Mare</span></div><span class="dish-price">14.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Monkey 47</span></div><span class="dish-price">15.00</span></div>
+
+    <div class="sub-head">Virgin Cocktails</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Seedlip<span class="dish-desc">Seedlip non-alcoholic spirit, ginger ale, munt, gember</span></span></div><span class="dish-price">11.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">No Dark &amp; Stormy<span class="dish-desc">0.0 rum, Fever Tree ginger beer, limoen</span></span></div><span class="dish-price">12.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">G&amp;T 0.0<span class="dish-desc">Tanqueray 0.0, Fever Tree Indian tonic, limoen</span></span></div><span class="dish-price">10.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Virgin Pornstar Martini</span></div><span class="dish-price">11.50</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Cava 0.0</span></div><span class="dish-price">7.50</span></div>
+
+    <p class="menu-note">Vraag naar onze likeurenkaart voor een uitgebreider aanbod.</p>
+  </div>
+
+  <!-- ── WIJNEN ── -->
+  <div class="panel" id="panel-wijnen">
+    <div class="section-head"><h2>Wijn per glas</h2></div>
+
+    <div class="sub-head">Mousserend</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Prosecco Belstar, Italië</span></div><span class="dish-price">9.00 / 45.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Cava Reserva Brut Nature Parés Baltà, Spanje</span></div><span class="dish-price">11.00 / 55.00</span></div>
+
+    <div class="sub-head">Rosé</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Saint Félix 2024, Pays de l'Hérault, Frankrijk</span></div><span class="dish-price">6.00 / 30.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Luberon Rosé 2024, Famille Perrin, Frankrijk</span></div><span class="dish-price">7.00 / 35.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Côtes de Provence Fleur de l'Amaurigue 2024</span></div><span class="dish-price">8.50 / 42.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Aix-en-Provence Barbebelle Rosé 2024</span></div><span class="dish-price">9.00 / 45.00</span></div>
+
+    <div class="sub-head">Wit</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Rueda 'Caballero de Olmedo' 2024, Spanje</span></div><span class="dish-price">6.50 / 32.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Pinot Grigio 'Tavo' 2024, Veneto, Italië</span></div><span class="dish-price">7.50 / 37.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Viognier 2023 Corette, Pays d'Oc, Frankrijk</span></div><span class="dish-price">8.00 / 40.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Grüner Veltliner Reserve 'Joe' 2023, Oostenrijk</span></div><span class="dish-price">9.00 / 45.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Chardonnay '234' 2024 Bodegas Enate, Spanje</span></div><span class="dish-price">9.50 / 47.00</span></div>
+
+    <div class="sub-head">Rood</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Vigneti delle Dolomiti Merlot 2023, Italië</span></div><span class="dish-price">6.00 / 30.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Syrah 'La Petite' 2024, Frankrijk</span></div><span class="dish-price">7.00 / 35.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Montepulciano d'Abruzzo 'Terrana' 2024, Italië</span></div><span class="dish-price">8.00 / 40.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Pinot Noir 2023 Villa Wolf, Pfalz, Duitsland</span></div><span class="dish-price">8.50 / 42.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Rioja Reserva 'Viña Alberdi' 2020, La Rioja Alta</span></div><span class="dish-price">11.00 / 55.00</span></div>
+
+    <div class="sub-head">Alcoholvrij</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Mosel Riesling Alkoholfrei 0.0% 2023, Wit</span></div><span class="dish-price">7.50 / 37.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Petit Bellot Rose, Frederic Bellot, Rosé</span></div><span class="dish-price">7.00 / 35.00</span></div>
+
+    <div class="section-head"><h2>Champagnes</h2></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Champagne Brut Grand Cru 'Conversation', J.L. Vergnon</span></div><span class="dish-price">98.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Champagne Blanc de Blancs 'Baronette', Thierry Houry</span></div><span class="dish-price">120.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Champagne Extra-Brut 'Première Cuvée', Bruno Paillard</span></div><span class="dish-price">120.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Champagne Billecart Salmon 'Le Réserve'</span></div><span class="dish-price">120.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Champagne Billecart Salmon 'Le Rosé'</span></div><span class="dish-price">175.00</span></div>
+
+    <div class="section-head"><h2>Natuurwijn</h2></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Indocilis Rosato 2020, Podere Pradarolo<span class="dish-desc">Emilia-Romagna, Barbera, Mousserend Rosé</span></span></div><span class="dish-price">45.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Little Fluffy Clouds 2024, Fruita Analogica<span class="dish-desc">Catalonië, Macabeu, Muscat, Wit</span></span></div><span class="dish-price">46.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Weisser Mulatschak 2024, Meinklang<span class="dish-desc">Burgenland, Traminer, Pinot Gris, Welschriesling, Oranje</span></span></div><span class="dish-price">41.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Cuvée Marguerite 2024, Matassa<span class="dish-desc">Roussillon, Muscat, Oranje</span></span></div><span class="dish-price">68.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Roter Mulatschak 2023, Meinklang<span class="dish-desc">Burgenland, Zweigelt, St. Laurent, Rood</span></span></div><span class="dish-price">42.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Olla Rouge 2023, Matassa<span class="dish-desc">Roussillon, Grenache, Macabeu, Rood</span></span></div><span class="dish-price">59.00</span></div>
+
+    <div class="section-head" style="margin-top:3rem;"><h2>Wit</h2></div>
+
+    <div class="sub-head">Frankrijk — Loire</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Sauvignon Blanc Touraine 'Le Petiot' 2024, Vincent Ricard</span></div><span class="dish-price">48.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Muscadet 'Sèvre et Maine sur Lie' 2023, Domaine Fay d'Homme</span></div><span class="dish-price">50.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Pouilly Fumé 2024, Sébastien Treuillet</span></div><span class="dish-price">58.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Sancerre 'Perrier La Chapelle' 2024, Bailly Réverdy</span></div><span class="dish-price">69.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Sancerre 'Chavignol' 2023, Gérard Boulay</span></div><span class="dish-price">80.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Saumur Blanc 'Yvonne' 2021, Château Yvonne</span></div><span class="dish-price">88.00</span></div>
+
+    <div class="sub-head">Frankrijk — Chablis</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Chablis 'La Côte d'Or' 2023, Yannick Cadiou</span></div><span class="dish-price">75.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Chablis Vieilles Vignes 2023, Domaine Defaix</span></div><span class="dish-price">78.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Chablis 1er Cru 'Fourchaume' 2023, Domaine Defaix</span></div><span class="dish-price">90.00</span></div>
+
+    <div class="sub-head">Frankrijk — Bourgogne Côte d'Or</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Bourgogne Chardonnay Cuvée Flavie 2022, Domaine Amiot</span></div><span class="dish-price">70.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Marsannay Blanc 'Le Clos Monopole' 2022, René Bouvier</span></div><span class="dish-price">98.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Monthelie 'Les Duresses' 2021, Xavier Monnot</span></div><span class="dish-price">110.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Chassagne Montrachet 1er Cru 'Macherelles' 2022, Dom. Amiot</span></div><span class="dish-price">145.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Meursault 2022, Jean Philippe Fichet</span></div><span class="dish-price">148.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Meursault 'Les Chevalières' 2021, Xavier Monnot</span></div><span class="dish-price">165.00</span></div>
+
+    <div class="sub-head">Frankrijk — Bourgogne Côte Challonnaise</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Rully 1er Cru 'Rabourcé' 2023, Domaine Jaeger Defaix</span></div><span class="dish-price">85.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Givry Blanc 'Teppe de Chenèves' 2023, Francois Lumpp</span></div><span class="dish-price">92.00</span></div>
+
+    <div class="sub-head">Frankrijk — Bourgogne Mâconnais</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Macon Lugny 'Les Genièvres' 2023, Cave Talmard</span></div><span class="dish-price">56.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Saint Véran 2023, Chateau Fuisse</span></div><span class="dish-price">75.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Pouilly-Fuissé 2021, Château du Clos</span></div><span class="dish-price">96.00</span></div>
+
+    <div class="sub-head">Frankrijk — Zuid</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Picpoul de Pinet 2024, Félines Jourdan, Languedoc</span></div><span class="dish-price">45.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Vermentino 2023, Anne Gros, Minervois</span></div><span class="dish-price">68.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Condrieu 'Les Corbonnes' 2022, Vignoble Boisseyt, Rhône</span></div><span class="dish-price">110.00</span></div>
+
+    <div class="sub-head">Italië</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Gavi di Gavi 2023, Nicola Bergaglio</span></div><span class="dish-price">48.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Verdicchio dei Castelli di Jesi 2023, Andrea Felici</span></div><span class="dish-price">54.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Chardonnay 2024, Alois Lageder, Alto Adige</span></div><span class="dish-price">56.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Etna Bianco 'Guardoilvento' 2024, Caciorgna Pietro</span></div><span class="dish-price">62.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Soave Classico 'Monte Carbonare' 2022, Suavia</span></div><span class="dish-price">65.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Pinot Bianco 'Berg' 2022, Colterenzio, Alto Adige</span></div><span class="dish-price">72.00</span></div>
+
+    <div class="sub-head">Spanje</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Valdeorras 'O Luar do Sil' Godello 2023, Capellanes</span></div><span class="dish-price">54.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Albariño 'O Rosal' 2024, Terras Gauda, Rias Baixas</span></div><span class="dish-price">59.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Rioja Blanco 2020, Murua</span></div><span class="dish-price">65.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Chardonnay 'Barrica' 2022, Bodegas Enate, Somontano</span></div><span class="dish-price">67.00</span></div>
+
+    <div class="sub-head">Duitsland</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Rheinhessen Riesling 'Red Stone' 2023, Gunderloch</span></div><span class="dish-price">46.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Lahrer Weissburgunder Trocken 2022, Wöhrle</span></div><span class="dish-price">53.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Oberrotweil Grauburgunder Trocken 2020, Weingut Wagner</span></div><span class="dish-price">64.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Rheingau Riesling 1er 'Hochheimer Stielweg AR' 2023, Künstler</span></div><span class="dish-price">78.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Lahrer Chardonnay 'Teufelslochgasse' G.G. 2022, Wöhrle</span></div><span class="dish-price">120.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Riesling GG 'Felsenberg' 2022, Donnhoff, Nahe</span></div><span class="dish-price">120.00</span></div>
+
+    <div class="sub-head">Oostenrijk</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Burgenland 'Chardonnay Classic' 2023, PMC</span></div><span class="dish-price">46.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Sauvignon Blanc Kitzeck-Sausal 2024, Wohlmuth</span></div><span class="dish-price">53.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Grüner Veltliner 'Langenloiser' 2023, Kamptal, Loimer</span></div><span class="dish-price">60.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Wachau DAC Grüner Veltliner 'Dürnsteiner' 2022, F.X. Pichler</span></div><span class="dish-price">82.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Niederösterreich Chardonnay 2022, Bründlmayer</span></div><span class="dish-price">100.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Wachau Grüner Veltliner Vinothekfuellung Smaragd 2021, Knoll</span></div><span class="dish-price">115.00</span></div>
+
+    <div class="section-head" style="margin-top:3rem;"><h2>Rood</h2></div>
+
+    <div class="sub-head">Frankrijk — Loire</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Chinon Vieilles Vignes 2022, Domaine La Marinière</span></div><span class="dish-price">54.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Saumur Champigny 'La Folie' 2023, Château Yvonne</span></div><span class="dish-price">60.00</span></div>
+
+    <div class="sub-head">Frankrijk — Bourgogne</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Bourgogne Rouge 'Vieilles Vignes' 2023, Domaine Saint Germain</span></div><span class="dish-price">54.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Rully 2023, Domaine Jaeger Defaix</span></div><span class="dish-price">70.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Marsannay 'Le Finage' 2022, René Bouvier</span></div><span class="dish-price">98.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Givry 1er Cru 'A Vigne Rouge' 2023, Francois Lumpp</span></div><span class="dish-price">120.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Volnay Vieilles Vignes 2022, Domaine Joseph Voillot</span></div><span class="dish-price">135.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Clos Vougeot Grand Cru 2021, Domaine Henri Rebourseau</span></div><span class="dish-price">365.00</span></div>
+
+    <div class="sub-head">Frankrijk — Beaujolais</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Fleurie 'Tradition' 2023, Clos de la Roilette</span></div><span class="dish-price">56.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Brouilly 2022, Domaine Les Garçons</span></div><span class="dish-price">60.00</span></div>
+
+    <div class="sub-head">Frankrijk — Bordeaux</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Château La Croix Romane 2022, Lalande Pomerol</span></div><span class="dish-price">65.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Château Larrieu Terrefort 2020, Margaux</span></div><span class="dish-price">95.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Saint-Estèphe 2016, Les Pagodes de Cos</span></div><span class="dish-price">125.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Réserve de la Comtesse 2019, Pauillac</span></div><span class="dish-price">130.00</span></div>
+
+    <div class="sub-head">Frankrijk — Zuid</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Syrah 'Confluence' 2022, Domaine De Boisseyt</span></div><span class="dish-price">56.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Saint-Joseph 'Châtelet' 2022, Domaine Monier Perréol</span></div><span class="dish-price">92.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Châteauneuf du Pape 2021, Château de Beaucastel</span></div><span class="dish-price">190.00</span></div>
+
+    <div class="sub-head">Italië</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Barbera d'Asti 'Zucchetto' 2022, La Morandina</span></div><span class="dish-price">50.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Pinot Nero 2023, Colterenzio, Alto Adige</span></div><span class="dish-price">56.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Etna Rosso 'Guardoilvento' 2022, Caciorgna Pietro</span></div><span class="dish-price">64.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Valpolicella Ripasso 'Campi Magri' 2020, Corte Sant'Alda</span></div><span class="dish-price">84.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Brunello di Montalcino 2019, La Serena</span></div><span class="dish-price">95.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Amarone della Valpolicella 'Ruvaln' 2019, Adalia</span></div><span class="dish-price">100.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Barolo Perarmando 2021, Parusso</span></div><span class="dish-price">106.00</span></div>
+
+    <div class="sub-head">Spanje</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Ribera del Duero Roble 2023, Pago de los Capellanes</span></div><span class="dish-price">58.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Rioja Reserva 2016, Murua</span></div><span class="dish-price">62.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Cabernet Reserva 2018, Bodegas Enate, Somontano</span></div><span class="dish-price">63.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Ribera del Duero Crianza 2021, Bodegas Pesquera</span></div><span class="dish-price">70.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Priorat 'Lo Món' 2018, Trossos del Priorat</span></div><span class="dish-price">74.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Rioja Gran Reserva 'Viña Arana' 2016, La Rioja Alta</span></div><span class="dish-price">100.00</span></div>
+
+    <div class="sub-head">Duitsland</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Spätburgunder 2022, Shelter Winery, Baden</span></div><span class="dish-price">56.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Franken Spätburgunder 'Tradition' 2022, Fürst</span></div><span class="dish-price">72.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Pfalz Spätburgunder 'Gimmeldinger Biengarten' 2020, Christmann</span></div><span class="dish-price">120.00</span></div>
+
+    <div class="sub-head">Oostenrijk</div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Burgenland Zweigelt 2021, Umathum</span></div><span class="dish-price">56.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Burgenland Blaufränkisch 'Hochäcker' 2021, Weninger</span></div><span class="dish-price">57.00</span></div>
+    <div class="menu-row"><div class="dish"><span class="dish-name">Burgenland 'Eichkogel' 2020, Kollwentz</span></div><span class="dish-price">86.00</span></div>
+
+    <p class="menu-note">Jaartallen zijn onder voorbehoud. Vraag de bediening naar onze dagaanbiedingen.</p>
+  </div>
+
+</div>
+
+<script src="menu.js" defer></script>
+<script>
+(function() {
+  function init() {
+    var btn     = document.getElementById("nav-hamburger");
+    var overlay = document.getElementById("mob-overlay");
+    var close   = document.getElementById("mob-close");
+    if (!btn || !overlay || !close) return;
+    btn.addEventListener("click", function() {
+      overlay.style.display = "flex";
+      document.body.style.overflow = "hidden";
+      btn.classList.add("open");
+    });
+    function closeMenu() {
+      overlay.style.display = "none";
+      document.body.style.overflow = "";
+      btn.classList.remove("open");
+    }
+    close.addEventListener("click", closeMenu);
+    overlay.querySelectorAll("a").forEach(function(a) {
+      a.addEventListener("click", closeMenu);
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else { init(); }
+})();
+</script>
+</body>
+</html>

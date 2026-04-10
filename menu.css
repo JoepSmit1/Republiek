@@ -1,0 +1,63 @@
+/* ============================================
+   Republiek Bloemendaal — Menu Page Styles
+============================================ */
+
+/* PAGE HEADER */
+.page-header { padding: 8rem 2rem 2rem; text-align: center; }
+.page-label { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--stone); margin-bottom: 0.6rem; }
+.page-title { font-size: clamp(36px, 5vw, 58px); font-weight: 300; font-style: italic; }
+
+/* TAB BAR */
+.tab-bar { display: flex; justify-content: center; flex-wrap: wrap; gap: 0; border-bottom: 0.5px solid var(--border); position: sticky; top: 62px; background: rgba(250,248,243,0.97); backdrop-filter: blur(10px); z-index: 50; padding: 0 2rem; }
+.tab-btn { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 400; background: none; border: none; border-bottom: 2px solid transparent; color: var(--stone); padding: 1rem 1.4rem; cursor: pointer; transition: all .2s; white-space: nowrap; }
+.tab-btn:hover { color: var(--ink); }
+.tab-btn.active { color: var(--ink); font-weight: 500; border-bottom: 2px solid var(--ink); }
+
+/* PANELS */
+.menu-panels { max-width: 820px; margin: 0 auto; padding: 3.5rem 2rem 6rem; }
+.panel { display: none; animation: fadeIn .3s ease; }
+.panel.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* NOTICE BOXES */
+.notice { display: flex; align-items: flex-start; gap: 10px; background: var(--sand); border-left: 2px solid var(--ink); padding: 0.9rem 1.2rem; margin-bottom: 2rem; font-size: 14px; font-style: italic; color: var(--ink-soft); line-height: 1.6; }
+.notice-weekend { border-left-color: var(--stone); color: var(--stone); background: rgba(154,148,136,0.08); }
+
+/* SECTION HEAD */
+.section-head { display: flex; align-items: baseline; gap: 1.2rem; margin-bottom: 1.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border); margin-top: 2.5rem; }
+.section-head:first-of-type { margin-top: 0; }
+.section-head h2 { font-size: 26px; font-weight: 300; font-style: italic; }
+.section-head .time { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--stone); }
+
+/* SUB HEAD */
+.sub-head { font-family: 'Jost', sans-serif; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--stone); margin: 2rem 0 0.8rem; }
+
+/* WEEKEND BADGE */
+.weekend-tag { font-family: 'Jost', sans-serif; font-size: 8.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone); border: 0.5px solid var(--stone); padding: 2px 7px; margin-left: 8px; vertical-align: middle; white-space: nowrap; }
+
+/* MENU ROWS */
+.menu-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.7rem 0; border-bottom: 0.5px solid var(--border); gap: 2rem; }
+.menu-row:last-of-type { border-bottom: none; }
+.dish { flex: 1; }
+.dish-name { font-size: 17px; font-weight: 400; color: var(--ink); }
+.dish-desc { display: block; font-size: 13px; font-weight: 300; font-style: italic; color: var(--stone); margin-top: 2px; line-height: 1.5; }
+.dish-price { font-family: 'Jost', sans-serif; font-size: 13px; color: var(--stone); white-space: nowrap; font-weight: 300; flex-shrink: 0; }
+
+/* WINES GRID */
+.wines-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 3rem; }
+.wine-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.55rem 0; border-bottom: 0.5px solid var(--border); gap: 1rem; }
+.wine-row:last-of-type { border-bottom: none; }
+.wine-name { font-size: 14px; font-weight: 300; color: var(--ink-soft); flex: 1; line-height: 1.4; }
+.wine-name small { display: block; font-size: 12px; color: var(--stone); font-style: italic; margin-top: 1px; }
+.wine-prices { font-family: 'Jost', sans-serif; font-size: 12px; color: var(--stone); white-space: nowrap; font-weight: 300; text-align: right; }
+
+/* DIVIDER */
+.section-divider { height: 0.5px; background: var(--border); margin: 2.5rem 0; }
+
+.menu-note { font-size: 13px; font-style: italic; color: var(--stone); text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 0.5px solid var(--border); }
+
+@media (max-width: 820px) {
+  /* mobile nav handled by shared.css */
+  .menu-panels { padding: 2rem 1.5rem 4rem; }
+  .wines-grid { grid-template-columns: 1fr; }
+}
